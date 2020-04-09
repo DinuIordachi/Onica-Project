@@ -1,0 +1,509 @@
+/* Generalities */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    text-decoration: none;
+}
+
+ul{
+    margin-bottom: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.col-md-4{
+    padding: 0;
+}
+
+select:active,
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+select:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    box-shadow: none !important;
+}
+
+/* Generalities */
+
+/* custom navbar */
+
+.header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 300;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+  
+  .header li a:hover {
+    background-color: #f4f4f4;
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+
+
+/* custom navbar */
+
+/* custom Carousele*/
+
+.carousel{
+    font-family: "Raleway", sans-serif;
+    height: 100vh;
+}
+
+.carousel img{
+    height: 100vh;
+}
+
+.carousel-indicators,
+.carousel-control-prev,
+.carousel-control-next{
+    z-index: 201;
+}
+
+.darkside{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+}
+
+.darkside .text{
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    position: absolute;
+    font-family: "Raleway", sans-serif;
+}
+
+.darkside .title{
+    font-size: 70px;
+    font-family: "Raleway", sans-serif;
+}
+
+.darkside .desc{
+    font-size: 18px;
+}
+
+
+/* custom Carousele*/
+
+/* About Us */
+
+.about-us{
+    padding: 2rem 0;
+    background-color: #F1F1F1;
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description{
+    padding: 0 12rem;
+}
+
+.description .title{
+    font-size: 3.5rem;
+}
+
+.description .desc{
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.description a{
+    font-size: 1.1rem;
+}
+
+/* About Us */
+
+
+/* Main Titles */
+
+.intro{
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.maint{
+    text-transform: uppercase;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 40px;
+    line-height: 1.35em;
+    font-family: "Raleway", sans-serif;
+}
+
+.subtext{
+    padding: 2rem 0 0 0 ;
+    letter-spacing: 0.1rem;
+    opacity: 0.8;
+}
+
+/* Main Titles */
+
+
+/* Galery */
+
+.galery{
+    background-color: #F1F1F1;
+}
+
+.plain-text{
+    padding:0 7rem ;
+}
+
+.plain-text .title{
+    padding: 0 0 2rem 0;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.plain-text .galery-desc{
+    line-height: 2rem;
+}
+
+/* Galery */
+
+
+/* servicii */
+
+.element .specialimage{
+    width: 100%;
+    background-color: #000000;
+    transition: 0.4s ease;
+}
+
+.element{
+overflow: hidden;
+background-color: black;
+}
+
+
+.element .effect{
+    text-align: center;
+    margin: auto;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.4s;
+    opacity: 1;
+}
+
+.element:hover >.effect{
+    height: 50%;
+    opacity: 1;
+}
+
+.element:hover >.text{
+    animation-name: fadeInBottom;
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+
+.effect .text{
+    color: #000000;
+    font-size: 1.5rem;
+    width: 70%;
+    margin: 10% auto auto auto;
+}
+
+.effect button{
+    margin: 2rem 0;
+    background: none;
+    border: 1px solid #f1f1f1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: .2s ease-in;
+}
+
+.effect button:hover{
+    background-color: #ffffff;
+}
+
+
+/* servicii */
+
+
+/* Contact us */
+
+    .contact-us{
+        height: 700px;
+    }
+
+    .contact-us img{
+        height: 100%;
+    }
+
+    .hover-box{
+        background-color: rgba(255, 255, 255, 0.8);
+        top: 50%;
+        left: 50%;
+        margin: auto;
+        transform: translate(-50%, -50%);
+        padding: 3rem 0;
+        width: 50%;
+    }
+
+    .container{
+        width: 80%;
+    }
+
+    input{
+        border: none;
+        border-bottom: 2px solid #4B8699;
+        background:none;
+        width: 100%;
+    }
+
+    input:active{
+        border: none;
+    }
+
+    input:focus{
+        border-bottom: 3px solid rgb(115, 201, 230);
+    }
+
+    .form-group{
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .custom-select {
+        background: none;
+        border: none;
+        border-bottom: 2px solid #4B8699;
+        border-radius: 0px;
+      }
+      
+      .select-selected {
+        background-color: DodgerBlue;
+      }
+      
+      .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+      }
+      
+
+      .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #fff transparent;
+        top: 7px;
+      }
+      
+
+      .select-items div,.select-selected {
+        color: #ffffff;
+        padding: 8px 16px;
+        border: 1px solid transparent;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+        user-select: none;
+      }
+      
+      .select-items {
+        position: absolute;
+        background-color: DodgerBlue;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+      }
+      
+      .select-hide {
+        display: none;
+      }
+      
+      .select-items div:hover, .same-as-selected {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      textarea{
+          background: none;
+          border: none;
+          border-bottom: 2px solid #4B8699;
+          width: 100%;
+      }
+
+      textarea:focus{
+        border-bottom: 3px solid rgb(115, 201, 230);
+    }
+
+      button{
+        border: 2px solid #4B8699 !important;
+        background-color: rgb(255, 255, 255) !important;
+        transition: 0.3s ease-in;
+      }
+
+      button:hover{
+          background-color: #4B8699 !important;
+          color: #ffffff !important;
+      }
+
+
+      .header a{
+          color: black;
+          padding: 0 1rem;
+      }
+
+/* Contact us */
+
+
