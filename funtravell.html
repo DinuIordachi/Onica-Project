@@ -10,12 +10,13 @@
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
 </head>
 <body>
 
   <!-- navbar -->
 
- <header class="header">
+ <header class="header col-md-12">
   <a href="/" class="logo">Funtravell</a>
   <input class="menu-btn" type="checkbox" id="menu-btn" />
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
@@ -78,11 +79,11 @@
 
   <!-- Despre Noi -->
 
-    <div class="about-us row">
+    <div class="about-us row w-100">
 
       <div class="col-md-6 centered">
 
-        <div class="description">
+        <div class="description w-100">
 
           <div class="title">
             Despre Noi
@@ -108,9 +109,12 @@
 
     <div class="intro">
 
-      <div class="maint">
-        Pachete Speciale si Oferte
-      </div>
+      <h1 class="ml6" id="efect1">
+        <span class="text-wrapper">
+          <span class="letters">PACHETE SPECIALE si oferte</span>
+        </span>
+      </h1>
+      
 
       <div class="subtext">
         Descoperiți o destinație nouă
@@ -123,9 +127,9 @@
   <!-- Galerie -->
 
     <div class="galery">
-      <div class="row">
+      <div class="row w-100">
 
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4">
           <img src="images/ec14061b42d1dc5b809367f7cfda8eff.webp" class="w-100">
         </div>
 
@@ -135,21 +139,21 @@
             <div class="title">SĂRBĂTORI DE PLAJA</div>
 
             <div class="galery-desc">
-              Iti place sa inveti despre istoria locurilor pe care le vizitezi? Dacă răspunsul este da, atunci nu există nici o îndoială că Urban Beach Holiday este pachetul perfect de călătorie pentru dumneavoastră. Urban Beach Holiday special oferă oportunități incredibile de vizitare a obiectivelor turistice pentru fiecare călător. Pregătește-te pentru o aventură distractivă și de neuitat. Sunați astăzi și comanda biletele dvs. de astăzi pentru doar 550 USD pe persoană.
+              Iti place sa inveti despre istoria locurilor pe care le vizitezi? Dacă răspunsul este da, atunci nu există nici o îndoială că Urban Beach Holiday este pachetul perfect de călătorie pentru dumneavoastră. Urban Beach Holiday special oferă oportunități incredibile de vizitare a obiectivelor turistice pentru fiecare călător. Pregătește-te pentru o aventură distractivă și de neuitat. Sunați astăzi și comanda biletele dvs.
             </div>
 
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4">
           <img src="images/2625e0ee7f5b43f39d9ddaa388ecc2c2.webp" class="w-100">
         </div>
 
       </div>
 
-      <div class="row">
+      <div class="row w-100">
 
-        <div class="col-md-4 centered">
+        <div class="col-md-6 col-lg-4 centered">
           <div class="plain-text">
 
             <div class="title">INSULELE CARAIBE</div>
@@ -161,11 +165,11 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4">
           <img src="images/a85312c1441f9981e2620ea1f49b630c.webp" class="w-100">
         </div>
 
-        <div class="col-md-4 centered">
+        <div class="col-md-6 col-lg-4 centered">
           <div class="plain-text">
 
             <div class="title">TURUL CULINAR</div>
@@ -188,9 +192,11 @@
 
    <div class="intro">
 
-    <div class="maint">
-      Serviciile Noastre
-    </div>
+    <h1 class="ml6" id="efect2">
+      <span class="text-wrapper">
+        <span class="letters">Serviciile Noastre</span>
+      </span>
+    </h1>
 
     <div class="subtext">
       Călătoria a devenit UȘOARA
@@ -200,7 +206,7 @@
 <!-- servicii -->
 
 <div class="services">
-  <div class="row">
+  <div class="row w-100">
 
     <div class="col-md-4">
       <div class="element position-relative">
@@ -252,9 +258,11 @@
 
    <div class="intro">
 
-    <div class="maint">
-      CONTACTEAZĂ-NE
-    </div>
+    <h1 class="ml6" id="efect3">
+      <span class="text-wrapper">
+        <span class="letters">Contacteaza-ne</span>
+      </span>
+    </h1>
 
     <div class="subtext">
       MOLDOVA
@@ -547,7 +555,7 @@
       </form>
     </div>
   </div>
-  <img src="images/48c9ebd48b4245ef9641b92663c80aec.webp" alt="">
+  <img src="images/48c9ebd48b4245ef9641b92663c80aec.webp" alt="" class="col-md-12">
 </div>
 
 <!-- Contact Us -->
@@ -574,6 +582,37 @@
     &copy; by Onica Vlad
   </div>
 </div>
+
+<script>
+
+var breakpoint = false;
+
+function effect1(){
+  breakpoint = true;
+  var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  anime.timeline()
+  .add({
+    targets: '#efect1',
+    opacity: 1,
+    duration: 10,
+    easing: "easeOutExpo",
+    delay: 10
+  })
+    .add({
+      targets: '#efect1 .letter',
+      translateY: ["1.1em", 0],
+      translateZ: 0,
+      duration: 1500,
+      delay: (el, i) => 100 * i
+  })}
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 820 && !breakpoint ) {
+    effect1();
+  }});
+  
+</script>
 
 </body>
 </html>
