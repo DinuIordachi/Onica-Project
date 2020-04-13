@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="javascript/script.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/animejs/lib/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.8.0.min.js"></script>
+
 </head>
 <body>
 
@@ -21,11 +23,11 @@
   <input class="menu-btn" type="checkbox" id="menu-btn" />
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
   <ul class="menu">
-    <li><a href="#work">Acasa</a></li>
-    <li><a href="#about">Despre Noi</a></li>
-    <li><a href="#careers">Oferte Speciale</a></li>
-    <li><a href="#contact">Serviciile Noastre</a></li>
-    <li><a href="#contact">Contacteaza-ne</a></li>
+    <li><a href="#home">Acasa</a></li>
+    <li><a href="#about-us">Despre Noi</a></li>
+    <li><a href="#special-offers">Oferte Speciale</a></li>
+    <li><a href="#services">Serviciile Noastre</a></li>
+    <li><a href="#contacts">Contacteaza-ne</a></li>
   </ul>
 </header>
   <!-- navbar -->
@@ -35,10 +37,10 @@
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
-      <div class="darkside">
+      <div class="darkside" id="home">
         <div class="text">
           <div class="title">IA-ȚI URMĂTOAREA CĂLĂTORIE CU FUNTRAVELL</div>
-          <p class="desc">O lume a posibilelor călătorii fără sfârșit</p>
+          <p class="desc" id="trigger">O lume a posibilelor călătorii fără sfârșit</p>
         </div>
       </div>
 
@@ -79,7 +81,7 @@
 
   <!-- Despre Noi -->
 
-    <div class="about-us row w-100">
+    <div class="about-us row w-100" id="about-us">
 
       <div class="col-md-6 centered">
 
@@ -107,19 +109,18 @@
 
   <!-- oferte -->
 
-    <div class="intro">
+  <div class="intro" id="special-offers">
 
-      <h1 class="ml6" id="efect1">
-        <span class="text-wrapper">
-          <span class="letters">PACHETE SPECIALE si oferte</span>
-        </span>
-      </h1>
-      
-
-      <div class="subtext">
-        Descoperiți o destinație nouă
+    <h1>
+      <div class="cuvinte cuvinte1">
+       PACHETE <BR> SPECIALE <BR> SI <BR> OFERTE
       </div>
+    </h1>
+
+    <div class="subtext">
+      Călătoria a devenit UȘOARA
     </div>
+  </div>
 
   <!-- oferte -->
 
@@ -129,11 +130,11 @@
     <div class="galery">
       <div class="row w-100">
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-sm-12 col-lg-4">
           <img src="images/ec14061b42d1dc5b809367f7cfda8eff.webp" class="w-100">
         </div>
 
-        <div class="col-md-4 centered">
+        <div class="col-sm-12 col-lg-4 centered">
           <div class="plain-text">
 
             <div class="title">SĂRBĂTORI DE PLAJA</div>
@@ -145,7 +146,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-sm-12 col-lg-4">
           <img src="images/2625e0ee7f5b43f39d9ddaa388ecc2c2.webp" class="w-100">
         </div>
 
@@ -153,7 +154,7 @@
 
       <div class="row w-100">
 
-        <div class="col-md-6 col-lg-4 centered">
+        <div class="col-sm-12 col-lg-4 centered">
           <div class="plain-text">
 
             <div class="title">INSULELE CARAIBE</div>
@@ -165,16 +166,16 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
+        <div class="col-sm-12 col-lg-4">
           <img src="images/a85312c1441f9981e2620ea1f49b630c.webp" class="w-100">
         </div>
 
-        <div class="col-md-6 col-lg-4 centered">
+        <div class="col-sm-12 col-lg-4 centered">
           <div class="plain-text">
 
             <div class="title">TURUL CULINAR</div>
 
-            <div class="galery-desc">
+            <div class="galery-desc" id="triger3">
               Esti gata sa experimentezi momente care vor dura o viata? Luați legătura cu FunTravell pentru a afla mai multe despre Turul exclusiv culinar. Suntem încântați să vă punem la dispoziție una dintre cele mai bune călătorii din viața voastră. Pregătește-te să creezi niște amintiri de neuitat și să nu uiți să ne trimiți o carte poștală!
             </div>
 
@@ -190,12 +191,12 @@
 
    <!-- servicii -->
 
-   <div class="intro">
+   <div class="intro" id="services">
 
-    <h1 class="ml6" id="efect2">
-      <span class="text-wrapper">
-        <span class="letters">Serviciile Noastre</span>
-      </span>
+    <h1>
+      <div class="cuvinte cuvinte2">
+        SERVICIIILE <br> NOASTRE
+      </div>
     </h1>
 
     <div class="subtext">
@@ -208,7 +209,7 @@
 <div class="services">
   <div class="row w-100">
 
-    <div class="col-md-4">
+    <div class="col-lg-4 col-sm-12">
       <div class="element position-relative">
         <div class="effect position-absolute">
           <div class="text">
@@ -222,7 +223,7 @@
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-lg-4 col-sm-12">
       <div class="element position-relative">
         <div class="effect position-absolute">
           <div class="text">
@@ -236,7 +237,7 @@
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-lg-4 col-sm-12">
       <div class="element position-relative">
         <div class="effect position-absolute">
           <div class="text">
@@ -256,12 +257,12 @@
 
    <!-- Contacte -->
 
-   <div class="intro">
+   <div class="intro" id="contacts">
 
-    <h1 class="ml6" id="efect3">
-      <span class="text-wrapper">
-        <span class="letters">Contacteaza-ne</span>
-      </span>
+    <h1>
+      <div class="cuvinte cuvinte3">
+        CONTACTEAZĂ-NE
+      </div>
     </h1>
 
     <div class="subtext">
@@ -574,45 +575,84 @@
     <a href="">onica.voldemordevici@gmail.com</a>
   </div>
 
-  <div class="subtext">
-    +373 60 994 485
+  <div class="finish">
+    <div class="subtext">
+      +373 60 994 485
+    </div>
+  
+    <div class="subtext" >
+      &copy; by Onica Vlad
+    </div>
   </div>
 
-  <div class="subtext" >
-    &copy; by Onica Vlad
-  </div>
 </div>
 
 <script>
 
-var breakpoint = false;
+// var breakpoint = false;
 
-function effect1(){
-  breakpoint = true;
-  var textWrapper = document.querySelector('.ml6 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-  anime.timeline()
-  .add({
-    targets: '#efect1',
-    opacity: 1,
-    duration: 10,
-    easing: "easeOutExpo",
-    delay: 10
-  })
-    .add({
-      targets: '#efect1 .letter',
-      translateY: ["1.1em", 0],
-      translateZ: 0,
-      duration: 1500,
-      delay: (el, i) => 100 * i
-  })}
+// function effect1(){
+//   breakpoint = true;
+//   var textWrapper = document.querySelector('.ml6 .letters');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+//   anime.timeline()
+//   .add({
+//     targets: '#efect1',
+//     opacity: 1,
+//     duration: 10,
+//     easing: "easeOutExpo",
+//     delay: 10
+//   })
+//     .add({
+//       targets: '#efect1 .letter',
+//       translateY: ["1.1em", 0],
+//       translateZ: 0,
+//       duration: 1500,
+//       delay: (el, i) => 100 * i
+//   })}
 
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 820 && !breakpoint ) {
-    effect1();
-  }});
+// $(window).scroll(function () {
+//   if ($(this).scrollTop() > 820 && !breakpoint ) {
+//     effect1();
+//   }});
   
+$( document ).ready(function() {
+
+$('#trigger').waypoint(function(direction) {
+    
+    if (direction ==='down') {
+            textfade1();
+            $(".cuvinte1").css("opacity", "1")
+        }
+  });
+});
+
+$( document ).ready(function() {
+
+$('#special-offers').waypoint(function(direction) {
+    
+    if (direction ==='down') {
+            textfade2();
+            $(".cuvinte2").css("opacity", "1");
+        }
+  });
+});
+
+$( document ).ready(function() {
+
+$('#triger3').waypoint(function(direction) {
+    
+    if (direction ==='down') {
+            textfade3();
+            $(".cuvinte3").css("opacity", "1")
+        }
+  });
+});
 </script>
+
+<script src="javascript/script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 
 </body>
 </html>
