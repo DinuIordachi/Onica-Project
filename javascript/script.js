@@ -4,6 +4,7 @@ then close all select boxes:*/
 
 
 // text animation
+"use strict";
 function textfade1(){
 
   const textel = document.querySelector(".cuvinte1");
@@ -107,4 +108,32 @@ function textfade1(){
         clearInterval(timer);
         timer = null;
       }
-      }
+ }
+
+ var nodemailer = require('./nodemailer');
+
+ function sendemail(){
+   var emailadress = document.querySelector("#e-mail");
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'dimaiordachi3@gmail.com',
+      pass: 'loveyou16'
+    }
+  });
+  
+  var mailOptions = {
+    from: 'dimaiordachi3@gmail.com',
+    to: emailadress,
+    subject: 'Sending Email using Node.js',
+    text: 'That was easy!'
+  };
+  
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+ }
