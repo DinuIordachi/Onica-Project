@@ -79,6 +79,17 @@ label:focus,
     z-index: 300;
     padding: 0 2rem;
   }
+
+  .header .navmascot{
+    display: flex;
+    align-items: center;
+    width: 300px;
+  }
+
+  .header .logtext{
+    font-size: 2rem;
+    color: #4B8699;
+  }
   
   .header ul {
     margin: 0;
@@ -113,7 +124,7 @@ label:focus,
   }
   
   .header .logo {
-    width: 150px;
+    width: 120px;
     height: auto;
     float: left;
     font-size: 2em;
@@ -130,8 +141,8 @@ label:focus,
   .header .menu-icon {
     cursor: pointer;
     float: right;
-    padding: 0 20px;
-    margin-top: 45px;
+    padding: 10px 20px;
+    margin-top: -55px;
   }
   
   .header .menu-icon .navicon {
@@ -186,7 +197,7 @@ label:focus,
     top: 0;
   }
 
-  @media (min-width: 1036px) {
+  @media (min-width: 1200px) {
 
     .header{
       display: flex;
